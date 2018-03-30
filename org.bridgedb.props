@@ -1,0 +1,4 @@
+url='http://bridgedb.org/'
+pkg="org.bridgedb"
+report='MainBridgeDbWebsite'
+expectedContent='BridgeDb is a framework'
