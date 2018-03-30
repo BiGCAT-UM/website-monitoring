@@ -28,7 +28,7 @@ if $online; then
   echo "Monitor finished, website is online."
 else
   echo "Monitor failed, website seems to be down."
-  echo "    <failure type=\"WebsiteOffline\">The website ${url} is down</failure>\n" >> uptime.xml
+  echo "    <failure type=\"WebsiteOffline\">The website ${url%%?*} is down</failure>\n" >> uptime.xml
 fi
 echo "  </testcase>\n" >> uptime.xml
 
@@ -37,7 +37,7 @@ if grep -q "${expectedContent}" "${pkg}.content.html"; then
   echo "Website contains expected content"
 else
   echo "Website does not contain expected content: '${expectedContent}'."
-  echo "    <failure type=\"WebsiteContent\">The ${url} website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
+  echo "    <failure type=\"WebsiteContent\">The ${url%%?*} website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
 fi
 echo "  </testcase>\n" >> uptime.xml
 
