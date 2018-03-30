@@ -1,0 +1,4 @@
+url='https://vocabularies.wikipathways.org/'
+pkg="org.wikipathways.vocab"
+report='WikiPathwaysVocabulariesWebsite'
+expectedContent='This page describes the WP and GPML Ontologies'
