@@ -1,0 +1,4 @@
+url='https://dev.openphacts.org/swagger/spec/ops_2_1.json'
+pkg="org.openphacts.dev.webservice.api2.1.json"
+report='OpenPHACSTAPIWebsite'
+expectedContent='Returns a list of URIs associated to the input URI'
