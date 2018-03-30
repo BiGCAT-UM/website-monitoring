@@ -1,0 +1,4 @@
+url='https://dev.openphacts.org/docs/2.2'
+pkg="org.openphacts.dev.webservice.api2.2"
+report='OpenPHACSTAPIWebsite'
+expectedContent='Returns a list of URIs associated to the input URI'
