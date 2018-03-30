@@ -37,7 +37,7 @@ if grep -q "${expectedContent}" "${pkg}.content.html"; then
   echo "Website contains expected content"
 else
   echo "Website does not contain expected content: '${expectedContent}'."
-  echo "    <failure type=\"WebsiteContent\">The website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
+  echo "    <failure type=\"WebsiteContent\">The ${url} website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
 fi
 echo "  </testcase>\n" >> uptime.xml
 
