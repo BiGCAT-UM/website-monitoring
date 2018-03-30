@@ -1,0 +1,4 @@
+url='https://wikipathways.org/'
+pkg="org.wikipathways.https"
+report='MainWikiPathwaysHTTPSWebsite'
+expectedContent='Browse by species and category'
