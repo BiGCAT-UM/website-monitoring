@@ -1,0 +1,4 @@
+url='http://plugins.pathvisio.org/'
+pkg="org.pathvisio.plugins"
+report='MainPathVisioPluginsWebsite'
+expectedContent='You can find a list of all available plugins'
