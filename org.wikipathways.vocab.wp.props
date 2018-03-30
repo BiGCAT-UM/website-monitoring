@@ -1,0 +1,4 @@
+url='https://vocabularies.wikipathways.org/wp'
+pkg="org.wikipathways.vocab.wp"
+report='WPVocabulariesWebsite'
+expectedContent='binding interaction between two physical entities'
