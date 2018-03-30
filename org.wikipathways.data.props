@@ -1,0 +1,4 @@
+url='http://data.wikipathways.org/'
+pkg="org.wikipathways.data"
+report='MainWikiPathwaysDownloadPage'
+expectedContent='WikiPathways Data Downloads'
