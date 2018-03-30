@@ -1,4 +1,4 @@
 url='http://webservice.bridgedb.org/'
 pkg="org.bridgedb.webservice"
 report='BridgeDbWebserviceWebsite'
-expectedContent='bridgedb webservices'
+expectedContent='Swagger UI'
