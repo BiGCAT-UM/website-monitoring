@@ -1,0 +1,4 @@
+url='https://vocabularies.wikipathways.org/gpml'
+pkg="org.wikipathways.vocab.gpml"
+report='GPMLVocabulariesWebsite'
+expectedContent='connection point on a graphical line or an interaction'
