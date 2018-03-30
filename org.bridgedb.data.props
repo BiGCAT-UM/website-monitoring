@@ -1,0 +1,4 @@
+url='bridgedb.org/data/gene_database/'
+pkg="org.bridgedb.data"
+report='BridgeDbMappingDataWebsite'
+expectedContent='BridgeDb is a framework'
