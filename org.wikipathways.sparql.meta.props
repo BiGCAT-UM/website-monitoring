@@ -1,0 +1,4 @@
+url='http://sparql.wikipathways.org/?default-graph-uri=http%3A%2F%2Frdf.wikipathways.org%2F&query=select+distinct+%3Fdataset+str%28%3FtitleLit%29+as+%3Ftitle+%3Fdate+%3Flicense+where+{%0D%0A++%3Fdataset+a+void%3ADataset+%3B%0D%0A++++dcterms%3Atitle+%3FtitleLit+%3B%0D%0A++++dcterms%3Alicense+%3Flicense+%3B%0D%0A++++pav%3AcreatedOn+%3Fdate+.%0D%0A}&format=text%2Fhtml&timeout=0&debug=on'
+pkg="org.wikipathways.sparql"
+report='MainWikiPathwaysSPARQLMetadataLoaded'
+expectedContent='http://creativecommons.org/publicdomain/zero/1.0/'
