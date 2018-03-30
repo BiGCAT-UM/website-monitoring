@@ -1,4 +1,4 @@
 url='http://pathvisio.org/'
 pkg="org.pathvisio"
 report='MainPathVisioWebsite'
-expectedContent='BridgeDb is a framework'
+expectedContent='Learn how to download PathVisio'
