@@ -1,4 +1,4 @@
 url='https://webservice.bridgedb.org/Human/xrefs/L/1234'
-pkg="org.wikipathways.webservice.calls"
+pkg="org.bridgedb.webservice.calls"
 report='GetXrefs'
 expectedContent='Entrez Gene'
