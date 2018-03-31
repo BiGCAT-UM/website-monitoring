@@ -1,4 +1,4 @@
 url='https://dev.openphacts.org/docs/2.2'
-pkg="org.openphacts.dev.webservice.api2.2"
-report='OpenPHACSTAPIWebsite'
+pkg="org.openphacts.dev.webservice"
+report='OpenPHACSTAPI2dot2Website'
 expectedContent='OpenPHACTS Development Version API Active Docs'
