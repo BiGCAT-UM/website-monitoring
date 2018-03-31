@@ -1,0 +1,4 @@
+url='http://vocabularies.bridgedb.org/ops'
+pkg="org.bridgedb.vocab"
+report='BridgeDbOPSVocabulariesWebsite'
+expectedContent='A resource that defines identifiers for some biological entity'
