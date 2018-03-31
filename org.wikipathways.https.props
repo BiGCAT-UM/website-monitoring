@@ -1,4 +1,4 @@
 url='https://wikipathways.org/'
-pkg="org.wikipathways.https"
+pkg="org.wikipathways"
 report='MainWikiPathwaysHTTPSWebsite'
 expectedContent='Browse by species and category'
