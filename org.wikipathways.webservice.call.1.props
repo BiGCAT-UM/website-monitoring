@@ -1,4 +1,4 @@
 url='https://webservice.wikipathways.org/getPathway?pwId=WP1&format=xml'
-pkg="org.wikipathways.webservice"
-report='APICallGetPathwayAsXML'
+pkg="org.wikipathways.webservice.calls"
+report='GetPathwayAsXML'
 expectedContent='getPathwayResponse'
