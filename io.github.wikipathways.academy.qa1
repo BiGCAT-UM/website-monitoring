@@ -1,0 +1,4 @@
+url='https://wikipathways.github.io/academy/stages/task-recent-changes/index.html'
+pkg="io.github.wikipathways.academy"
+report='QA:RecentChanges'
+expectedContent='pathways remaining'
