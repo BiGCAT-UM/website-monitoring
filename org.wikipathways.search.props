@@ -1,4 +1,4 @@
-url='https://www.wikipathways.org//index.php?query=WP1&species=Mus+musculus&title=Special%3ASearchPathways&doSearch=1&ids=&codes=&type=query'
+url='https://www.wikipathways.org//index.php?query=WP1&amp;species=Mus+musculus&amp;title=Special%3ASearchPathways&amp;doSearch=1&amp;ids=&amp;codes=&amp;type=query'
 pkg="org.wikipathways"
 report='GetSearchResult'
 expectedContent='Statin Pathway'
