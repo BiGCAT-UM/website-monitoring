@@ -1,4 +1,3 @@
-
 url='https://webservice.wikipathways.org'
 pkg="org.wikipathways.webservice"
 report='WikiPathwaysWebservice'
