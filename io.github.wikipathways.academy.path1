@@ -1,0 +1,4 @@
+url='https://wikipathways.github.io/academy/stages/draw-geneproduct/'
+pkg="io.github.wikipathways.academy"
+report='Path:DrawGeneProduct'
+expectedContent='Draw a Gene Product'
