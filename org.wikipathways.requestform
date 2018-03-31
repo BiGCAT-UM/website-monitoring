@@ -1,0 +1,4 @@
+url='https://docs.google.com/forms/d/e/1FAIpQLScBos0ipoaq3npLCmfsmFN5HxAc0AX6dhnvwwmY706nZmj5QA/viewform'
+pkg="org.wikipathways"
+report='WikiPathwaysRequestForm'
+expectedContent='WikiPathways Request Form'
