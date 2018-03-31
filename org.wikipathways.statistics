@@ -1,4 +1,4 @@
 url='https://www.wikipathways.org/index.php/WikiPathways:Statistics'
-pkg="org.wikipathways.statistics"
+pkg="org.wikipathways"
 report='WikiPathwaysStatisticsPage'
 expectedContent='Number of pathways'
