@@ -1,4 +1,4 @@
 url='https://webservice.wikipathways.org/index.php?swagger'
-pkg="org.wikipathways.webservice.json"
+pkg="org.wikipathways.webservice"
 report='WikiPathwaysWebserviceJSON'
 expectedContent='"swagger":"2.0"'
