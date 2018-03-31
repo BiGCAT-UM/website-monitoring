@@ -1,0 +1,4 @@
+url='https://www.wikipathways.org/wpi/PathwayWidget.php?id=WP87'
+pkg="org.wikipathways"
+report='PathwayWidget'
+expectedContent='Pathway:WP87?view=widget'
