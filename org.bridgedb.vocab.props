@@ -1,0 +1,4 @@
+url='http://vocabularies.bridgedb.org/'
+pkg="org.bridgedb.vocab"
+report='BridgeDbVocabulariesWebsite'
+expectedContent='The BridgeDb DataSource Ontology'
