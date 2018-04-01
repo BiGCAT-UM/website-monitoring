@@ -9,7 +9,7 @@ echo "Checking status of $url."
 
 for (( i=1; i<=$attempts; i++ ))
 do
-  code=`curl -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.content.html`
+  code=`curl -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html`
 
   echo "Found code $code for $url."
 
@@ -33,7 +33,7 @@ fi
 echo "  </testcase>\n" >> uptime.xml
 
 echo "  <testcase classname=\"${pkg}.${report}\" name=\"WebsiteContent\">\n"  >> uptime.xml
-if grep -q "${expectedContent}" "${pkg}.content.html"; then
+if grep -q "${expectedContent}" "${pkg}.${report}.content.html"; then
   echo "Website contains expected content"
 else
   echo "Website does not contain expected content: '${expectedContent}'."
