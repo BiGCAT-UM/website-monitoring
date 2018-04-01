@@ -1,4 +1,4 @@
 url='https://www.wikipathways.org/index.php/WikiPathways%3AStatistics'
 pkg="org.wikipathways"
 report='WikiPathwaysStatisticsPage'
-expectedContent='simply counts down the pathways edited'
+expectedContent='several statistics and graphs to indicate'
