@@ -4,12 +4,13 @@ source $1
 attempts=3
 timeout=5
 online=false
+useragent="BiGCaT Website Monitor"
 
 echo "Checking status of $url."
 
 for (( i=1; i<=$attempts; i++ ))
 do
-  code=`curl -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html`
+  code=`curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html`
 
   echo "Found code $code for $url."
 
