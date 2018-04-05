@@ -42,3 +42,5 @@ else
 fi
 echo "  </testcase>\n" >> uptime.xml
 
+# a short break before continuing to the next website
+sleep 0.5
