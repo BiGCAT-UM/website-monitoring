@@ -8,11 +8,9 @@ useragent="BiGCaT Website Monitor"
 
 echo "Checking status of $url."
 
-failedCall=""
 for (( i=1; i<=$attempts; i++ ))
 do
-  curlCall='curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html'
-  code=`${curlCall}`
+  code=`curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html`
 
   echo "Found code $code for $url."
 
@@ -22,7 +20,6 @@ do
     break
   else
     echo "Website $url seems to be offline. Waiting $timeout seconds."
-    failedCall="${curlCall}"
     sleep $timeout
   fi
 done
@@ -33,7 +30,7 @@ if $online; then
 else
   echo "Monitor failed, website seems to be down."
   echo "    <failure type=\"WebsiteOffline\">The website ${url%%\?*} is down</failure>\n" >> uptime.xml
-  echo "    <system-out>Failed call: ${failedCall}</system-out>\n" >> uptime.xml
+  echo "    <system-out>HTTP ${code}</system-out>\n" >> uptime.xml
 fi
 echo "  </testcase>\n" >> uptime.xml
 
