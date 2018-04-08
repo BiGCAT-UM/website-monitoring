@@ -8,7 +8,7 @@ useragent="BiGCaT Website Monitor"
 
 echo "Checking status of $url."
 
-failedCall = ""
+failedCall=""
 for (( i=1; i<=$attempts; i++ ))
 do
   curlCall='curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html'
@@ -22,7 +22,7 @@ do
     break
   else
     echo "Website $url seems to be offline. Waiting $timeout seconds."
-    failedCall = $curlCall
+    failedCall="${curlCall}"
     sleep $timeout
   fi
 done
