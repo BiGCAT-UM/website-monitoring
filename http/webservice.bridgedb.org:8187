@@ -1,0 +1,4 @@
+url='http://webservice.bridgedb.org:8187/Human/properties'
+pkg="org.bridgedb"
+report='SNP webservice'
+expectedContent='DATATYPE	SNP'
