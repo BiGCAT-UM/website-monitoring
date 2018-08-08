@@ -1,0 +1,5 @@
+
+url='https://webservice.wikipathways.org/findPathwaysByText?query=apoptosis'
+pkg="org.wikipathways.webservice.calls"
+report='SearchPathwaysByText'
+expectedContent='findPathwaysByTextResponse'
