@@ -1,0 +1,4 @@
+url='http://bridgedb.prod.openrisknet.org/Human/xrefs/L/1234?dataSource=En'
+pkg="org.bridgedb.prod.openrisknet.service" 
+report='BridgeDbDockerServiceOpenRiskNetService'
+expectedContent='ENSG00000160791	Ensembl'
