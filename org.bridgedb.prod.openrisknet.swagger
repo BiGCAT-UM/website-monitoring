@@ -1,4 +1,4 @@
 url='http://bridgedb.prod.openrisknet.org/swagger/'
-pkg="org.bridgedb.prod.openrisknet.swagger" #what does this mean exactly?
-report='BridgeDbDockerServiceOpenRiskNet' #This is just a return name to describe the test?
+pkg="org.bridgedb.prod.openrisknet.swagger"
+report='BridgeDbDockerServiceOpenRiskNet'
 expectedContent='Swagger UI'
