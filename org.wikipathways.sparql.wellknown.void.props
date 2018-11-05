@@ -1,0 +1,4 @@
+url='http://sparql.wikipathways.org/.well-known/void'
+pkg="org.wikipathways.sparql"
+report='SupportsWellKnownVoID'
+expectedContent='http://rdfs.org/ns/void#'
