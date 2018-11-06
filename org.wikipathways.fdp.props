@@ -1,0 +1,4 @@
+url='http://fdp.wikipathways.org/'
+pkg="org.wikipathways"
+report='FAIRDataPointWebsite'
+expectedContent='FDP of fdp.wikipathways.org'
