@@ -1,4 +1,4 @@
 url='https://projects.bigcat.unimaas.nl/'
 pkg="nl.unimaas.bigcat.projects"
 report='BiGCaTProjectsWebsite'
-expectedContent='Our Main Projects on Software Tools and Services'
+expectedContent='Software Tools and Services'
