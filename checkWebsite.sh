@@ -14,7 +14,7 @@ do
 
   echo "Found code $code for $url."
 
-  if [ "$code" = "200" ]; then
+  if [ "$code" = "200" -o "$code" = "000"]; then
     echo "Website $url is online."
     online=true
     break
