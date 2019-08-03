@@ -37,11 +37,15 @@ fi
 echo "  </testcase>\n" >> uptime.xml
 
 echo "  <testcase classname=\"${pkg}.${report}\" name=\"WebsiteContent\">\n"  >> uptime.xml
-if grep -q "${expectedContent}" "${pkg}.${report}.content.html"; then
-  echo "Website contains expected content"
+if [ "$httpcode" = "000" ]; then
+  echo "Not checking the content (because exit code 000)"
 else
-  echo "Website does not contain expected content: '${expectedContent}'."
-  echo "    <failure type=\"WebsiteContent\">The ${url%%\?*} website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
+  if grep -q "${expectedContent}" "${pkg}.${report}.content.html"; then
+    echo "Website contains expected content"
+  else
+    echo "Website does not contain expected content: '${expectedContent}'."
+    echo "    <failure type=\"WebsiteContent\">The ${url%%\?*} website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
+  fi
 fi
 echo "  </testcase>\n" >> uptime.xml
 

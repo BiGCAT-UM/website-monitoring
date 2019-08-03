@@ -1,0 +1,4 @@
+url='https://www.bridgedb.org/'
+pkg="org.bridgedb.www"
+report='MainWWWBridgeDbWebsite'
+expectedContent='Standardised access to Gene'
