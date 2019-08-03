@@ -10,11 +10,13 @@ echo "Checking status of $url."
 
 for (( i=1; i<=$attempts; i++ ))
 do
-  code=`curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html`
+  httpcode=`curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html; echo "Exit code: $? " | tee ${pkg}.${report}.exitcode | grep -v "Exit"`
+  exitcode=`cat ${pkg}.${report}.exitcode`
 
-  echo "Found code $code for $url."
+  echo "Found HTTP code $httpcode for $url."
+  echo "Found exit code $exitcode for $url."
 
-  if [ "$code" = "200" -o "$code" = "000" ]; then
+  if [ "$httpcode" = "200" -o "$httpcode" = "000" ]; then
     echo "Website $url is online."
     online=true
     break
@@ -30,7 +32,7 @@ if $online; then
 else
   echo "Monitor failed, website seems to be down."
   echo "    <failure type=\"WebsiteOffline\">The website ${url%%\?*} is down</failure>\n" >> uptime.xml
-  echo "    <system-out>HTTP ${code}</system-out>\n" >> uptime.xml
+  echo "    <system-out>HTTP ${httpcode}</system-out>\n" >> uptime.xml
 fi
 echo "  </testcase>\n" >> uptime.xml
 
