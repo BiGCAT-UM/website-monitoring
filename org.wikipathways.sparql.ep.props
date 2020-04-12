@@ -1,0 +1,4 @@
+url='http://sparql.wikipathways.org/sparql'
+pkg="org.wikipathways.sparql.ep"
+report='MainWikiPathwaysSPARQLEndPoint'
+expectedContent='Virtuoso SPARQL Query Editor'
