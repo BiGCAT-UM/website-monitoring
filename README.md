@@ -17,6 +17,23 @@ unique. The first line is the URL of the website to test (note that HTTP and HTT
 and the fourth line gives a string that is expected to be part of the HTML, JSON, etc that is
 returned for the URL (after a HTTP GET call).
 
+## Testing the website
+
+The helper script runs on test at the time. For convenience, you can wrap this to run all
+files and collect results in a JUnit-like XML file with something like this:
+
+```shell
+rm -f uptime.xml
+testCount=`ls -1 *.props | wc -l`
+echo "<testsuite tests=\"${testCount}\">\n" >> uptime.xml
+
+for filename in *.props; do
+  bash checkWebsite.sh "$filename"
+done
+
+echo "</testsuite>" >> uptime.xml
+```
+
 # Caveats
 
 The system is really just a poor man's set up and has its limitations. Take into account the following
