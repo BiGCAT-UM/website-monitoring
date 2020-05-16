@@ -22,6 +22,9 @@ do
     break
   elif [ "$httpcode" = "000" ]; then
     echo "Website $url is online but has an curl exit code $exitcode."
+    if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
+      httpcode=`curl -k -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html; echo "Exit code: $? " | tee ${pkg}.${report}.exitcode | grep -v "Exit"`
+    fi
     online=true
     break
   else
@@ -40,22 +43,32 @@ else
 fi
 echo "  </testcase>\n" >> uptime.xml
 
-echo "  <testcase classname=\"${pkg}.${report}\" name=\"WebsiteContent\">\n"  >> uptime.xml
+doCheckWebsite=false
 if [ "$httpcode" = "000" ]; then
-  echo "Not checking the content (because http code '${httpcode}' and exit code '${exitcode}')"
-  echo "    <failure type=\"WebsiteContent\">The ${url%%\?*} website content was not checked. cURL exit code '${exitcode}'</failure>\n" >> uptime.xml
+  if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
+    # SSL certificat, but we can still check
+    doCheckWebsite=true
+  fi
 else
+  doCheckWebsite=true
+fi
+
+echo "  <testcase classname=\"${pkg}.${report}\" name=\"WebsiteContent\">\n"  >> uptime.xml
+if $doCheckWebsite; then
   if grep -q "${expectedContent}" "${pkg}.${report}.content.html"; then
     echo "Website contains expected content"
   else
     echo "Website does not contain expected content: '${expectedContent}'."
     echo "    <failure type=\"WebsiteContent\">The ${url%%\?*} website content did not contain '${expectedContent}'</failure>\n" >> uptime.xml
   fi
+else
+  echo "Not checking the content (because http code '${httpcode}' and exit code '${exitcode}')"
+  echo "    <failure type=\"WebsiteContent\">The ${url%%\?*} website content was not checked. cURL exit code '${exitcode}'</failure>\n" >> uptime.xml
 fi
 echo "  </testcase>\n" >> uptime.xml
 
 echo "  <testcase classname=\"${pkg}.${report}\" name=\"SecurityCertificates\">\n"  >> uptime.xml
-if [ "$exitcode" = "60" ]; then
+if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
   echo "The remote server's SSL certificate or SSH md5 fingerprint was deemed not OK."
   echo "    <failure type=\"SecurityCertificates\">The ${url%%\?*} website's SSL certificate or SSH md5 fingerprint was deemed not OK: cURL exit code '${exitcode}'</failure>\n" >> uptime.xml
 else
