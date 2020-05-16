@@ -11,13 +11,17 @@ echo "Checking status of $url."
 for (( i=1; i<=$attempts; i++ ))
 do
   httpcode=`curl -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html; echo "Exit code: $? " | tee ${pkg}.${report}.exitcode | grep -v "Exit"`
-  exitcode=`cat ${pkg}.${report}.exitcode`
+  exitcode=`cat ${pkg}.${report}.exitcode | cut -d':' -f2 | sed -e 's/[ \t]//g'`
 
   echo "Found HTTP code $httpcode for $url."
   echo "Found exit code $exitcode for $url."
 
-  if [ "$httpcode" = "200" -o "$httpcode" = "000" ]; then
+  if [ "$httpcode" = "200" ]; then
     echo "Website $url is online."
+    online=true
+    break
+  elif [ "$httpcode" = "000" ]; then
+    echo "Website $url is online but has an curl exit code $exitcode."
     online=true
     break
   else
@@ -38,7 +42,8 @@ echo "  </testcase>\n" >> uptime.xml
 
 echo "  <testcase classname=\"${pkg}.${report}\" name=\"WebsiteContent\">\n"  >> uptime.xml
 if [ "$httpcode" = "000" ]; then
-  echo "Not checking the content (because exit code 000)"
+  echo "Not checking the content (because http code '${httpcode}' and exit code '${exitcode}')"
+  echo "    <failure type=\"WebsiteContent\">The ${url%%\?*} website content was not checked. cURL exit code '${exitcode}'</failure>\n" >> uptime.xml
 else
   if grep -q "${expectedContent}" "${pkg}.${report}.content.html"; then
     echo "Website contains expected content"
