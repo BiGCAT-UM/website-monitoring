@@ -24,8 +24,10 @@ do
     echo "Website $url is online but has an curl exit code $exitcode."
     if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
       httpcode=`curl -k -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html; echo "Exit code: $? " | tee ${pkg}.${report}.exitcode | grep -v "Exit"`
+      online=true
+    else
+      online=false
     fi
-    online=true
     break
   else
     echo "Website $url seems to be offline. Waiting $timeout seconds."
