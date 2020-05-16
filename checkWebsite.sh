@@ -54,5 +54,15 @@ else
 fi
 echo "  </testcase>\n" >> uptime.xml
 
+echo "  <testcase classname=\"${pkg}.${report}\" name=\"SecurityCertificates\">\n"  >> uptime.xml
+if [ "$exitcode" = "60" ]; then
+  echo "The remote server's SSL certificate or SSH md5 fingerprint was deemed not OK."
+  echo "    <failure type=\"SecurityCertificates\">The ${url%%\?*} website's SSL certificate or SSH md5 fingerprint was deemed not OK: cURL exit code '${exitcode}'</failure>\n" >> uptime.xml
+else
+  echo "No certificate problems detected"
+fi
+echo "  </testcase>\n" >> uptime.xml
+
+
 # a short break before continuing to the next website
 sleep 0.5
