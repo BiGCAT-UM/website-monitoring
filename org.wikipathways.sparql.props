@@ -1,4 +1,4 @@
 url='http://sparql.wikipathways.org/'
 pkg="org.wikipathways.sparql"
-report='MainWikiPathwaysSPARQLEndPoint'
-expectedContent='For example SPARQL queries'
+report='MainWikiPathwaysSPARQLFrontend'
+expectedContent='WikiPathways Snorql UI'
