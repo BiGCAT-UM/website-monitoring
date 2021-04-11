@@ -1,4 +1,4 @@
 url='https://www.wikipathways.org/index.php/Special:BrowsePathways'
 pkg="org.wikipathways"
 report='WikiPathwaysBrowsePage'
-expectedContent='Apoptosis'
+expectedContent='Acetylcholine'
