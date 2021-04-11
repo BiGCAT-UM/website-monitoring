@@ -1,4 +1,4 @@
 url='https://www.wikipathways.org/index.php/Pathway:WP2267'
 pkg="org.wikipathways"
 report='CanDownloadSomeWikiPathway'
-expectedContent='Homo sapiens'
+expectedContent='Homo zapiens'
