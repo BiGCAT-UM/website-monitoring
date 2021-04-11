@@ -1,4 +1,4 @@
-url='https://www.bridgedb.org/data/gene_database/'
+url='https://bridgedb.github.io/data/gene_database/'
 pkg="org.bridgedb.data"
 report='BridgeDbMappingDataWebsite'
 expectedContent='Cf_Derby_Ensembl'

@@ -1,4 +1,4 @@
-url='https://www.bridgedb.org/swagger/swagger.json'
+url='https://bridgedb.github.io/swagger/swagger.json'
 pkg="org.bridgedb.webservice"
 report='BridgeDbWebserviceJSON'
 expectedContent='"swagger": "2.0"'

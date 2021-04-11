@@ -1,4 +1,4 @@
-url='https://bridgedb.org/'
+url='https://bridgedb.github.io/'
 pkg="org.bridgedb"
 report='MainBridgeDbWebsite'
 expectedContent='Standardised access to Gene'

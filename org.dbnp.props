@@ -1,4 +1,0 @@
-url='https://www.dbnp.org/'
-pkg="org.dbnp"
-report='MainWebpage'
-expectedContent='dbNP: The Phenotype Data Infrastructure'

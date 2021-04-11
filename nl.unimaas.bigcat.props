@@ -1,4 +1,4 @@
-url='https://www.bigcat.unimaas.nl/'
+url='https://www.maastrichtuniversity.nl/research/bioinformatics'
 pkg="nl.unimaas.bigcat"
 report='BiGCaTWebsite'
-expectedContent='Department of Bioinformatics &#8211; BiGCaT'
+expectedContent='Department of Bioinformatics (BiGCaT)'
