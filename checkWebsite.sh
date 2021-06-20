@@ -47,8 +47,11 @@ echo "  </testcase>\n" >> uptime.xml
 
 doCheckWebsite=false
 if [ "$httpcode" = "000" ]; then
-  if [ "$exitcode" = "60" -o "$exitcode" = "51" -o "$exitcode" = "56"]; then
+  if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
     # SSL certificat, but we can still check
+    doCheckWebsite=true
+  elif [ "$exitcode" = "56" ]; then
+    # connection terminated but seems a false positive
     doCheckWebsite=true
   fi
 else
@@ -70,7 +73,7 @@ fi
 echo "  </testcase>\n" >> uptime.xml
 
 echo "  <testcase classname=\"${pkg}.${report}\" name=\"SecurityCertificates\">\n"  >> uptime.xml
-if [ "$exitcode" = "60" -o "$exitcode" = "51" -o "$exitcode" = "56"]; then
+if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
   echo "The remote server's SSL certificate or SSH md5 fingerprint was deemed not OK."
   echo "    <failure type=\"SecurityCertificates\">The ${url%%\?*} website's SSL certificate or SSH md5 fingerprint was deemed not OK: cURL exit code '${exitcode}'</failure>\n" >> uptime.xml
 else
