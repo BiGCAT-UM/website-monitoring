@@ -25,6 +25,9 @@ do
     if [ "$exitcode" = "60" -o "$exitcode" = "51" ]; then
       httpcode=`curl -k -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html; echo "Exit code: $? " | tee ${pkg}.${report}.exitcode | grep -v "Exit"`
       online=true
+    elif [ "$exitcode" = "56" ]; then
+      httpcode=`curl -k -A "${useragent}" -sL --connect-timeout 20 --max-time 30 -w "%{http_code}\\n" "$url" -o ${pkg}.${report}.content.html; echo "Exit code: $? " | tee ${pkg}.${report}.exitcode | grep -v "Exit"`
+      online=true
     else
       online=false
     fi
