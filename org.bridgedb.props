@@ -1,4 +1,4 @@
 url='https://bridgedb.github.io/'
 pkg="org.bridgedb"
 report='MainBridgeDbWebsite'
-expectedContent='Standardised access to Gene'
+expectedContent='mappings are provided for genes, proteins, metabolites'
