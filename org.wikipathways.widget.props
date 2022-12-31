@@ -1,4 +1,4 @@
-url='https://www.wikipathways.org/wpi/PathwayWidget.php?id=WP87'
+url='https://www.wikipathways.org/wpi/PathwayWidget.php?id=WP404'
 pkg="org.wikipathways"
 report='PathwayWidget'
-expectedContent='Pathway:WP87?view=widget'
+expectedContent='Pathway:WP404?view=widget'
