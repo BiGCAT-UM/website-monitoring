@@ -1,4 +1,4 @@
-url='https://www.wikipathways.org/instance/WP2267'
+url='https://www.wikipathways.org/pathways/WP2267.html'
 pkg="org.wikipathways"
 report='CanDownloadSomeWikiPathway'
 expectedContent='synaptic transmission'
