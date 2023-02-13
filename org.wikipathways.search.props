@@ -1,4 +1,0 @@
-url='https://www.wikipathways.org//index.php?query=WP1&species=Mus+musculus&title=Special%3ASearchPathways&doSearch=1&ids=&codes=&type=query'
-pkg="org.wikipathways"
-report='GetSearchResult'
-expectedContent="name='query' value='WP1'"
