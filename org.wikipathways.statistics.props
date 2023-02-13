@@ -1,4 +1,4 @@
-url='https://www.wikipathways.org/index.php/WikiPathways%3AStatistics'
+url='https://www.wikipathways.org/stats.html'
 pkg="org.wikipathways"
 report='WikiPathwaysStatisticsPage'
 expectedContent='notebooks prepares figures to summarize WikiPathways activity'
