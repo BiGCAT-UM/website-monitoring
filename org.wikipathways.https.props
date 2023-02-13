@@ -1,4 +1,4 @@
 url='https://wikipathways.org/'
 pkg="org.wikipathways"
 report='MainWikiPathwaysHTTPSWebsite'
-expectedContent='Browse by species and category'
+expectedContent='WikiPathways is an open, collaborative'
