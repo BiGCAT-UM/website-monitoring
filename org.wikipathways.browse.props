@@ -1,4 +1,4 @@
 url='https://www.wikipathways.org/browse/filters.html'
 pkg="org.wikipathways"
 report='WikiPathwaysBrowsePage'
-expectedContent='Filters | WikiPathways'
+expectedContent='Filters -  | WikiPathways'
