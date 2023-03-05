@@ -1,4 +1,4 @@
 url='https://wikipathways.org/'
 pkg="org.wikipathways"
 report='MainWikiPathwaysHTTPSWebsite'
-expectedContent='open, collaborative platform dedicated to the collection and reuse of biological pathways'
+expectedContent='open science platform for biological pathways contributed'
