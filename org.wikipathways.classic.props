@@ -1,4 +1,4 @@
 url='https://classic.wikipathways.org/'
 pkg="org.wikipathways"
 report='MainWikiPathwaysWebsite'
-expectedContent='Read about our 12-year journey'
+expectedContent="Today's Featured Pathway"
